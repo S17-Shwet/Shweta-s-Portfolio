@@ -1,0 +1,411 @@
+ body{ margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #d9d9d9;
+  background-color: #0f0c29; /* deep midnight fallback */
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: url("/stars.png") repeat;
+  background-size: cover; /* adjust star density */
+  
+  animation: moveStars 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveStars {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1000px 1000px; /* diagonal drifting */
+  }
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+  min-height: auto;
+    margin-bottom: -30px;  
+  scroll-margin-top: 80px; 
+}
+
+h2 {
+  color: #0077b5; /* LinkedIn Blue */
+  margin-bottom: 20px;
+}
+
+.home {
+  background: transparent;
+  color: white;
+  padding: 80px 20px;
+  /* margin-bottom: 10px; */
+}
+
+
+
+
+/* React js developer */
+
+.title
+{
+  /* font-weight:1400; */
+  font-size: 48px;
+  color: pink;
+  text-shadow: 0 0 10px pink, 0 0 20px pink;
+  margin-top: -40px;
+  
+}
+
+/* About me section */
+
+.about
+{
+  font-size: 36px;
+  color: pink;
+  /* margin-top: -600px; */
+  /* padding: 60px 20px; */
+  margin-bottom: 30px;
+  position: relative;      /* needed for the pseudo-element */
+  display: inline-block;   /* shrink-wrap width to text */
+}
+.about::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;           /* space below text */
+  width: 100%;             /* underline matches text width */
+  height: 3px;             /* thickness of underline */
+  background: pink;        /* line color */
+  border-radius: 2px;     
+                  /* slightly rounded ends */
+}
+/* about information */
+
+.about-container
+{
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent box */
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 0 auto;  /* center the box */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+   border: 2px solid pink;
+  color: #ebebeb;
+  
+}
+.collapsible-title
+{
+   font-size: 24px;
+  color: pink;
+  cursor: pointer;
+  /* margin-top: 40px; */
+  /* padding: 60px 20px; */
+  /* margin-bottom: -30px; */
+}
+.collapsible-content
+{  
+  /* background: rgba(255, 255, 255, 0.1); */
+  list-style: none;
+  padding: 30px;
+  /* color: #d9d9d9 */
+  border-radius: 12px;
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto;
+  /* border: 2px solid pink; */
+  color: #ebebeb;
+
+}
+.collapsible-content strong{
+   color: #ffffff; 
+   
+  font-weight: 500; 
+}
+/* skills section */
+.skills
+{
+  font-size: 36px;
+  color: pink;
+  /* margin-top: -600px; */
+  /* padding: 60px 20px; */
+  margin-bottom: 30px;
+  position: relative;      /* needed for the pseudo-element */
+  display: inline-block;   /* shrink-wrap width to text */
+}
+.skills::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;           /* space below text */
+  width: 100%;             /* underline matches text width */
+  height: 3px;             /* thickness of underline */
+  background: pink;        /* line color */
+  border-radius: 2px;     
+                  /* slightly rounded ends */
+}
+.skills-container
+{
+  background: rgba(255, 255, 255, 0.1);
+  list-style: none;
+  padding: 30px;
+  /* color: #d9d9d9 */
+  border-radius: 12px;
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto;
+  border: 2px solid pink;
+  color: #ebebeb;
+}
+.skills-container strong {
+  color: #ffffff; 
+  font-weight: 500; 
+}
+
+/* project section */
+.projects{
+  
+ font-size: 36px;
+  color: pink;
+  /* margin-top: -600px; */
+  /* padding: 60px 20px; */
+  margin-bottom: 30px;
+  position: relative;      /* needed for the pseudo-element */
+  display: inline-block;   /* shrink-wrap width to text */
+}
+.projects::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;           /* space below text */
+  width: 100%;             /* underline matches text width */
+  height: 3px;             /* thickness of underline */
+  background: pink;        /* line color */
+  border-radius: 2px;     
+                  /* slightly rounded ends */
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid pink;
+  color: #ebebeb;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+} 
+
+
+
+
+/* Contact section container */
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 60px 20px;
+  margin-top: 60px;
+  padding-bottom: 100px;
+}
+
+/* Left side: Contact form */
+.contact-form {
+  background: rgba(255, 255, 255, 0.1); /* transparent glass effect */
+  padding: 30px;
+  border-radius: 12px;
+  border: 2px solid pink;
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); */
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.contact-form h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: pink;
+  text-align: center;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid pink;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s ease;
+  box-sizing: border-box;
+  /* text-align: left; */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: pink;
+  box-shadow: 0 0 8px pink;
+}
+
+.contact-form button {
+  padding: 12px;
+ background: rgba(255, 255, 255, 0.1);
+  /* color: #0f0c29; */
+  font-size: 16px;
+  border: 2px solid pink;
+  border-radius: 8px;
+  cursor: pointer;
+  color: pink;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  /* background: #ff66b2; */
+  box-shadow: 0 0 12px white;
+}
+
+/* Right side: Contact info */
+.contact-info {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+  border: 2px solid pink;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+/* contact info title */
+.contactinfo
+{
+  
+  font-size: 36px;
+  color: pink;
+  margin-top:5px;
+    position: relative;      /* needed for the pseudo-element */
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  
+}
+.contactinfo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;           /* space below text */
+  width: 100%;  
+        /* underline matches text width */
+  height: 3px;             /* thickness of underline */
+  background: pink;        /* line color */
+  border-radius: 2px;     
+                  /* slightly rounded ends */
+}
+.contact-info h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: pink;
+  text-align: center;
+}
+
+.contact-info p {
+  margin: 12px 0;
+  font-size: 16px;
+  text-align: center;
+   /* color: pink; */
+}
+
+.contact-info a {
+  color:pink;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+  color: pink;
+}
+.icon
+{
+  color: #ff66b2;
+}
+
+
+/* CV Download button */
+.download-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 18px;
+  color: pink;
+  /* color: white; */
+  border-radius: 8px;
+  border: 2px solid pink;
+  text-decoration:none;
+  font-weight: bold;
+  
+  /* background: pink; */
+  
+}
+
+/* .download-btn:hover {
+  background: #1e7e34;
+  box-shadow: 0 0 10px #28a745;
+} */
+
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+}
+html, body, .page {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1; /* pushes footer to bottom */
+}
+
+
+.portfooter {
+  text-align: center;
+  padding: 20px;
+  color: #d9d9d9;
+  font-size: 16px;
+  width: 100%;   
+  position: relative;
+    
+}
+
+.portfooter::before {
+  content: "";
+  position: absolute;
+  top: 0;               /* place line at the top of footer */
+  left: 50%;            /* center horizontally */
+  transform: translateX(-50%); /* true center */
+  width: 90%;           /* make line shorter (not edge-to-edge) */
+  height: 1px;
+  width: 100%;
+  background: #444;
+
+}
